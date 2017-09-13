@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">微信自动发送消息</string>
+    <string name="accessibility_description">用于自动发送微信消息</string>
+</resources>

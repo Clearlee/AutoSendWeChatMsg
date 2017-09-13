@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:paddingLeft="9dp"
+        android:paddingRight="9dp"
+        android:layout_height="50dp">
+
+        <TextView
+            android:id="@+id/wechatName"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="微信好友:"/>
+
+        <EditText
+            android:id="@+id/sendName"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/wechatName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:paddingLeft="9dp"
+        android:paddingRight="9dp"
+        android:layout_height="50dp">
+
+        <TextView
+            android:id="@+id/wechatContent"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="发送内容:"/>
+
+
+        <EditText
+            android:id="@+id/sendContent"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/wechatContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:background="#E63232"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:id="@+id/testWechat"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:gravity="center"
+        android:textColor="#ffffff"
+        android:text="发送" />
+
+</LinearLayout>
