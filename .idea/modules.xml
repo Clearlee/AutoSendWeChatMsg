@@ -3,7 +3,9 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/AutoSendWeChatMsg.iml" filepath="$PROJECT_DIR$/AutoSendWeChatMsg.iml" />
+      <module fileurl="file://D:\Android\sample\AutoSendWeChatMsg\AutoSendWeChatMsg.iml" filepath="D:\Android\sample\AutoSendWeChatMsg\AutoSendWeChatMsg.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://D:\Android\sample\AutoSendWeChatMsg\app\app.iml" filepath="D:\Android\sample\AutoSendWeChatMsg\app\app.iml" />
     </modules>
   </component>
 </project>

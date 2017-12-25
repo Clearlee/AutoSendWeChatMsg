@@ -2,14 +2,21 @@ package com.clearlee.autosendwechatmsg;
 
 import android.accessibilityservice.AccessibilityService;
 import android.os.Build;
+import android.os.Bundle;
 import android.view.accessibility.AccessibilityNodeInfo;
 
 import java.util.List;
 
-public class PerformClickUtils {
+
+/**
+ * Created by Clearlee
+ * 2017/12/22.
+ */
+public class WechatUtils {
 
     public static String NAME;
     public static String CONTENT;
+
     /**
      * 在当前页面查找文字内容并点击
      *
@@ -56,6 +63,34 @@ public class PerformClickUtils {
                 }
             }
         }
+    }
+
+
+    public static boolean findViewByIdAndPasteContent(AccessibilityService accessibilityService, String id, String content) {
+        AccessibilityNodeInfo rootNode = accessibilityService.getRootInActiveWindow();
+        if (rootNode != null) {
+            List<AccessibilityNodeInfo> editInfo = rootNode.findAccessibilityNodeInfosByViewId(id);
+            if (editInfo != null && !editInfo.isEmpty()) {
+                Bundle arguments = new Bundle();
+                arguments.putCharSequence(AccessibilityNodeInfo.ACTION_ARGUMENT_SET_TEXT_CHARSEQUENCE, content);
+                editInfo.get(0).performAction(AccessibilityNodeInfo.ACTION_SET_TEXT, arguments);
+                return true;
+            }
+            return false;
+        }
+        return false;
+    }
+
+    public static String findTextById(AccessibilityService accessibilityService, String id) {
+        AccessibilityNodeInfo rootInfo = accessibilityService.getRootInActiveWindow();
+        if (rootInfo != null) {
+            List<AccessibilityNodeInfo> userNames = rootInfo.findAccessibilityNodeInfosByViewId(id);
+            if (userNames != null && userNames.size() > 0) {
+                String name = userNames.get(0).getText().toString();
+                return name;
+            }
+        }
+        return null;
     }
 
 
