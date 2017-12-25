@@ -173,7 +173,7 @@ public class AutoSendMsgService extends AccessibilityService {
                     return null;
                 }
 
-                //必须等待一秒钟，因为需要等待滚动操作完成
+                //必须等待，因为需要等待滚动操作完成
                 try {
                     Thread.sleep(500);
                 } catch (InterruptedException e) {

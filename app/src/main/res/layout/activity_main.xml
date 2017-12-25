@@ -6,59 +6,85 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
+        android:layout_height="50dp"
         android:paddingLeft="9dp"
-        android:paddingRight="9dp"
-        android:layout_height="50dp">
+        android:paddingRight="9dp">
 
         <TextView
             android:id="@+id/wechatName"
-            android:layout_centerVertical="true"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="微信好友:"/>
+            android:layout_centerVertical="true"
+            android:text="微信好友:" />
 
         <EditText
             android:id="@+id/sendName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout_marginLeft="5dp"
             android:layout_toRightOf="@+id/wechatName"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:text="测试" />
 
     </RelativeLayout>
 
     <RelativeLayout
         android:layout_width="match_parent"
+        android:layout_height="50dp"
         android:paddingLeft="9dp"
-        android:paddingRight="9dp"
-        android:layout_height="50dp">
+        android:paddingRight="9dp">
 
         <TextView
             android:id="@+id/wechatContent"
-            android:layout_centerVertical="true"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="发送内容:"/>
+            android:layout_centerVertical="true"
+            android:text="发送内容:" />
 
 
         <EditText
             android:id="@+id/sendContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout_marginLeft="5dp"
             android:layout_toRightOf="@+id/wechatContent"
+            android:text="测试发微信" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:paddingLeft="9dp"
+        android:paddingRight="9dp">
+
+        <TextView
+            android:id="@+id/wechatStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="发送状态:" />
+
+
+        <TextView
+            android:id="@+id/sendStatus"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/wechatStatus" />
 
     </RelativeLayout>
 
     <TextView
-        android:background="#E63232"
-        android:layout_marginTop="50dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginRight="16dp"
         android:id="@+id/testWechat"
         android:layout_width="match_parent"
         android:layout_height="40dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="50dp"
+        android:background="#E63232"
         android:gravity="center"
-        android:textColor="#ffffff"
-        android:text="发送" />
+        android:text="发送"
+        android:textColor="#ffffff" />
 
 </LinearLayout>
